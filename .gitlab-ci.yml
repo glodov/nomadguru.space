@@ -1,0 +1,28 @@
+# requiring the environment of NodeJS 10
+image: node:21
+
+before_script:
+  - cd web && npm install
+
+cache:
+  paths:
+    - web/node_modules/
+    - web/.nw/
+    - web/dist/
+
+pages:
+  stage: deploy
+  script:
+    - pwd
+    - npm run render-ssg
+    - npm run copy-dist
+  artifacts:
+    paths:
+    - web/dist
+  only:
+    - main  # Change this to the branch you want to trigger the pipeline
+  publish: web/dist
+  # rules:
+  #   # This ensures that only pushes to the default branch will trigger
+  #   # a pages deploy
+  #   - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

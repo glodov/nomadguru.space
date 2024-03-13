@@ -168,7 +168,11 @@ async function render(input = null) {
     }
     const logFile = path.join(__dirname, LOG_FILE);
     // load log
-    const log = loadYAML(logFile);
+    let log;
+    try {
+        log = loadYAML(logFile);
+    } catch {}
+    ensureDirectory(path.dirname(logFile));
     fs.writeFileSync(logFile, '');
     const forced = [];
     if (log && log['errors'] && log['errors'].length) {

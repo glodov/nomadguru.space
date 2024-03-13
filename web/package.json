@@ -40,6 +40,7 @@
     "render-index": "echo '{\"version\":\"index\"}' | node render.js --index",
     "render-search": "echo '{\"version\":\"search\"}' | node render.js --search",
     "render-full": "npm run build-themes && npm run render",
+    "render-ssg": "echo '{\"version\":\"ssg\"}' | node render.js",
     "copy-dist": "node public.js",
     "copy-legacy": "python ./copy-legacy.py --no-csv --no-images",
     "copy-legacy-with-images": "python ./copy-legacy.py --no-csv",

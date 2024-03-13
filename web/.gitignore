@@ -13,10 +13,13 @@
 /public/sitemaps/
 # no need to store translations, .yaml > $l files data are source
 /public/translation.*
+/public/robots.txt
 
 /logs/
 /.nw/
 # too many images for the git repository
 /public/thumb/
 # no need to store module's information if it can be taken from the sources
-/public/modules/nw/sources/
+/public/modules/
+
+/dist/
