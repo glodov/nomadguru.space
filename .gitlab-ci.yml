@@ -12,6 +12,7 @@ pages:
   stage: deploy
   script:
     - pwd
+    - npm run compile-themes
     - npm run render-ssg
     - npm run copy-dist-v
   artifacts:
