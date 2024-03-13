@@ -1,0 +1,97 @@
+title: SCHOOl
+page:
+  content:
+    - promo:
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/1Ce6HpZOPto?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&playlist=1Ce6HpZOPto&mute=1"
+        height: max
+        arrow: '#about'
+        block:
+          $class: content text-center text-white
+          content:
+            - p: РОЗВИТОК - ТВОРЧІСТЬ - ВІДПОЧИНОК
+            - $class: py-3 py-md-4 py-lg-5
+              h1: NOMAD GURU SCHOOL - ЕКОДВІЖ ДЛЯ ТЕБЕ
+            - p: ФЕСТИВАЛЬ, ЯКИЙ НІКОЛИ НЕ ЗАКІНЧУЄТЬСЯ!
+    - promo:
+        $id: about
+        $class: promo bg-black text-white
+        height: max
+        arrow: '#mentors'
+        block:
+          $class: block bg-black text-white
+          $style: max-width:100%
+          content:
+            - $style: max-width:45rem
+              $class: mx-auto mb-5
+              h2: NOMAD GURU SCHOOL - Це спільне творчість музикантів та митців
+            - $style: max-width:45rem
+              $class: mx-auto mb-5
+              p: |
+                "... Ми допомагаємо іншим освоїти свій голос, сучасні New Age та стародавні етно-інструменти, вчимо грі на гітарі, потоковій електронній аранжировці та взаємодії в музиці!
+            - $class: d-flex flex-row
+              nav:
+                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
+                  div:
+                  - $class: flex-grow-1
+                    $style: max-height:6rem
+                    icon: melody
+                  - Трансформація через звук, голос, танець, тіло
+                  - h3: ТВОРИ
+                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
+                  div:
+                  - $class: flex-grow-1
+                    $style: max-height:6rem
+                    icon: ohm
+                  - Імпровізація в музиці та в житті
+                  - h3: ЖИВИ
+                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
+                  div:
+                  - $class: flex-grow-1
+                    $style: max-height:6rem
+                    icon: head
+                  - Досвідчені наставники та нові друзі
+                  - h3: ВЧИ
+                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
+                  div:
+                  - $class: flex-grow-1
+                    $style: max-height:6rem
+                    icon: lotus
+                  - Майстер-класи, воркшопи, джеми, ретріти, виїзди в місця сили
+                  - h3: ВЧИСЬ
+
+    - promo:
+        $id: mentors
+        background:
+          $style: filter:blur(4px)
+          img: /images/school/gallery/111_0008.jpg
+        height: max
+        arrow: '#footer'
+        block:
+          $class: content p-3 p-md-4 p-lg-5 text-white text-center
+          content: 
+            - h2: NOMAD GURU SCHOOL об'єднує емпатів з різних галузей мистецтва та науки
+            - p: |
+                Наші методи знаходяться на перетині інтегральної психології, звукотерапії, музики, медитації та коучингу. Ми ведемо через музику до свідомості. Через відчуття до слухання!
+            - p: |
+                Якщо ти майстер у своєму ділі та готовий ділитися знаннями - ми чекаємо тебе в нашому ком'юніті..."
+            - $class: mentors
+              nav:
+              - person:
+                  image: /images/school/mentors/Eugene@1-1-h300px.jpeg
+                  name: Євген Артеменко
+                  title: Голосовий коуч
+                  desc: Музикант-мультиінструменталіст, діджей та продюсер
+              - person:
+                  image: /images/school/mentors/Nata@1-1-h300px.jpeg
+                  name: Ната Турбіна
+                  title: Генеральний директор, Голосовий коуч
+                  desc: Ідеологічний натхненник NOMAD GURU Ментор, Музикант і вокалістка NoMaD GURU, Дослідник і Філософ. Творець авторських активних медитацій, що розкривають творчий потенціал людини
+              - person:
+                  image: /images/school/mentors/Max@1-1-h300px.jpeg
+                  name: Макс Солдатенко
+                  title: Art Director
+                  desc: Музикант, звукотерапевт, психолог, тренер. Консультує людей та організації за методом Спіральної Динаміки, використовує музику як засіб комунікації, навчає взаємодії через активне слухання.

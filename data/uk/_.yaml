@@ -1,0 +1,20 @@
+$l:
+  # logo
+  copyLicense: Всі права захищені
+  # darkMode
+  darkMode: Нічний режим
+  # 404
+  Page not found: Сторінка не знайдена
+  # social
+  We are on the social: Ми у соціальних мережах
+  # search
+  Search btn: Поїхали
+  Search label: Пошук
+  Search placeholder: Школа вокалу
+  Search title: Пошук на сайті
+  Close label: Закрити
+  Close modal button: ''
+  results found: результатів знайдено
+  No results found: Жодного результату не знайдено
+  # contacts
+  Contacts: Контакти

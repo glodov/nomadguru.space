@@ -1,0 +1,51 @@
+$host: https://numadguru.yaro.page
+$theme: guru
+$layout: index
+$javascriptModules:
+  - bootstrap.bundle.min.js
+  - nw/api.min.js
+  - nw/types.min.js
+  - $theme/index.min.js
+$cssFiles:
+  - nw/index.css
+  - $theme/index.css
+$favicons:
+  - sizes: 64x64
+    href: /img/favicon/favicon-64.ico
+  - sizes: 300x300
+    href: /img/logo/black@2d.png
+    type: image/png
+  - sizes: 180x180
+    href: /img/logo/black@2d.png
+    rel: apple-touch-icon
+
+titleAffix: ∙ NOMAD GURU
+
+$l:
+  # logo
+  logoSrc: /img/logo/black@2d.png
+  logoDarkSrc: /img/logo/white@2d.png
+  logoWideSrc: /img/logo/black-wide.png
+  logoWideDarkSrc: /img/logo/white-wide.png
+  logoAlt: NOMAD GURU
+  # copyrights
+  copyTitle: NOMAD GURU
+  copyNo: 2008 - 2024
+  copyLicense: All rights reserved
+  # darkMode
+  darkMode: Night mode
+  # 404
+  Page not found: Page not found
+  # social
+  We are on the social: We are on the social networks
+  # search
+  Search btn: Go
+  Search label: Search
+  Search placeholder: Vocal school
+  Search title: Search on the website
+  Close label: Close
+  Close modal button: ''
+  results found: results found
+  No results found: No results found
+  # contacts
+  Contacts: Contacts

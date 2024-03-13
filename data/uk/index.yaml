@@ -1,0 +1,97 @@
+title: Простір
+
+page:
+  content:
+    - promo:
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/qstQ9SwCPGs?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&playlist=qstQ9SwCPGs&mute=1"
+        height: max
+        arrow: '#art-promo'
+        block:
+          - p: DEEP ORGANIC TECHNO - NORD FOLK - SHAMAN CHILL
+          - p: audio & visual art
+          - $class: py-3 py-md-4 py-lg-5
+            h1: NOMAD GURU SPACE
+          - p: "{ART}"
+          - p: "[HOUSE]"
+          - p: "|SCHOOL|"
+          - p: слухати NOMAD GURU на твоєму улюбленому ресурсі
+          - p: '#TONESOFMIND #HOLODY #SATKARTAR'
+          - p: '{#HOLODY на YOUTUBE}'
+          - p: '#NOMADGURUECSTATIC'
+
+    - promo:
+        $id: art-promo
+        background:
+          img: /images/art/boat-on-river.jpg
+        height: max
+        arrow: '#house-promo'
+        block:
+          - h2: '{ART}'
+          - h3: CREATE
+          - p: ' ---> Творчість NOMAD GURU найкраще визначається як «музика станів», поєднуючи у собі глибокі електронні баси, пронизливий жіночий вокал та первісну силу етнічних інструментів з усього світу. Народжена в імпровізації, музика NOMAD GURU - це маніфест чистого буття, філософії "тут-і-зараз" --- «'
+
+          # - h3: ALBUMS
+          # - p: '#TONESOFMIND / 2019 / Deep Trible Shaman House'
+          # - p: '#THEWAY / 2020 — теперішній час / Deep Organic Thecno — Downtempo — SHAMAN CHILL SINGLES #HOLODY #SATKARTAR'
+          # - p: '#NOMADGURUECSTATIC сети для тіла і духу. Танцюй, Дихай, Відчувай, Медитуй, проявляйся в музиці разом з нами!'
+          # - h3: 'VISUAL ART -> ASHO NICO'
+          - $href: /uk/art/index.html
+            $class: btn btn-danger
+            a: Детальніше про ART
+    
+    - promo:
+        $id: house-promo
+        background:
+          img: /images/school/disco.jpeg
+        height: max
+        arrow: '#school-promo'
+        block:
+          - h2: '[HOUSE]'
+          - h3: LIVE
+          - p: Наш ДІМ NOMAD GURU. МІСЦЕ, ДЕ МИ ЖИВЕМО І ТВОРИМО, де ми пишемо свої історії. Кожен своєю мовою. Ми різні, але нас поєднує музика, краса та любов до ЖИТТЯ. Ми - NOMAD GURU HOUSE - студія імпровізації та потокової творчості.
+          - p: Наші гості стають друзями, а друзів ми із задоволенням запрошуємо у гості – адже що може об'єднати краще, ніж спільне звучання?
+          - p: Якщо ти музикант і твоє серце відкрите – приїжджай до нас NOMAD GURU HOUSE, і ми разом створимо нашу неповторну колаборацію!
+          # - h4: 'Наші можливості:'
+          # - ul:
+          #   - Професійний поканальний запис потокового звучання;
+          #   - Відео- та фотозйомка, стрими, створення унікального контенту;
+          #   - 'Віддалені колаборації: навіть якщо ти знаходишся на іншому кінці світу, ми знаємо, як нам зіграти разом, не порушуючи потоку, і відобразити цей момент через звук та колір;'
+          #   - Невимушена атмосфера фестивалю, в якій комфортно жити та творити
+          - $href: /uk/school/index.html
+            $class: btn btn-info
+            a: Детальніше про HOUSE
+
+    - promo:
+        $id: school-promo
+        background:
+          img: /images/school/dance.jpeg
+        height: max
+        arrow: '#about-promo'
+        block:
+          - h2: '|SCHOOl|'
+          - h3: DEVELOP
+          - p: NOMAD GURU SCHOOL поєднує емпатів із різних сфер мистецтва та науки, готові ділитися своїми знаннями.
+          - p: Наші методи знаходяться на стику інтегральної психології, звукотерапії, музики, медитації та коучингу. Ми ведемо через музику до усвідомленості, через чуття – до слухання, через розвиток емоційного інтелекту – до лідерства.
+          - p: Все, що ми знаємо про звук, музику, творчість і комунікацію - ми готові розповісти тобі.
+          - p: Якщо ти майстер у своїй справі і готовий ділитися знаннями – ми чекаємо на тебе в нашому ком'юніті NOMAD GURU!
+          - $href: /uk/school/index.html
+            $class: btn btn-success
+            a: Детальніше про SCHOOl
+
+    - promo:
+        $id: about-promo
+        background:
+          img: /images/school/sing-to-live.jpeg
+        height: max
+        arrow: '#footer'
+        block:
+          - h2: '|ABOUT US|'
+          - h3: ESSENCE
+          - p: NOMAD GURU - динамічна музична колаборація, що має безліч форм. Як музичний проект, ми збираємо звукові коди різних культур та етносів у єдиний аудіоландшафт. Як колектив – об'єднуємо духовних шукачів, майстрів, учителів. Як арт-простір - надаємо платформу для спільної творчості в режимі "тут і зараз". Змінюється склад та ролі учасників, але друзі завжди залишаються друзями.
+          - $href: /uk/about/index.html
+            $class: btn btn-primary
+            a: Детальніше про нас

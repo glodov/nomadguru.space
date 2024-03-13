@@ -1,0 +1,10 @@
+- phone: +38 0505920042
+  email:
+    to: nmdguru@gmail.com
+    subject: Повідомлення з сайту NOMADGURU Space
+    body: |
+      Вітаю, NOMAD GURU!
+      Я пишу Вам про _____
+  address:
+    url: https://maps.app.goo.gl/uBonwYmUPVY5eScW6
+    text: Київ, Україна

@@ -1,0 +1,15 @@
+- title: Українська
+  code: uk
+  url: /uk/index.html
+  dir: uk
+  locale: uk-UA
+- title: English
+  code: en
+  url: /en/index.html
+  dir: en
+  locale: en-GB
+- title: Русский
+  code: ru
+  url: /ru/index.html
+  dir: ru
+  locale: ru-RU
