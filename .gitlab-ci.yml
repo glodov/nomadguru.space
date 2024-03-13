@@ -1,28 +1,18 @@
-# requiring the environment of NodeJS 10
+# The Docker image that will be used to build your app
 image: node:21
-
+# Functions that should be executed before the build script is run
 before_script:
   - cd web && npm install
-
-cache:
-  paths:
-    - web/node_modules/
-    - web/.nw/
-    - web/dist/
-
 pages:
-  stage: deploy
   script:
     - pwd
     - npm run render-ssg
     - npm run copy-dist
   artifacts:
     paths:
-    - web/dist
-  only:
-    - main  # Change this to the branch you want to trigger the pipeline
-  publish: web/dist
-  # rules:
-  #   # This ensures that only pushes to the default branch will trigger
-  #   # a pages deploy
-  #   - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
