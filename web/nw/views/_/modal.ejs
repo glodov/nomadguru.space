@@ -1,0 +1,24 @@
+<div class="modal fade" id="nwEditorModal" tabindex="-1" aria-labelledby="nwEditorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title fs-5" id="nwEditorModalLabel"></div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><%- l('Close modal button', $l) %></button>
+            </div>
+            <div class="modal-body nwe-body" id="nwEditorModalBody">
+            </div>
+            <div class="modal-footer nwe-footer" id="nwEditorFooter">
+                <button class="btn btn-outline-secondary" type="reset">
+                    <span><%= l('Editor. Reset button', $l) %></span>
+                    <span class="badge bg-danger">
+                        <em nwe="changes.length"></em>
+                        <span><%= l('changes', $l) %></span>
+                    </span>
+                </button>
+                <button class="btn btn-success" type="submit">
+                    <span><%= l('Editor. Save button', $l) %></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

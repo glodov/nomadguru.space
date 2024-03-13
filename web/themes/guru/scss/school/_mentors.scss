@@ -1,0 +1,19 @@
+.mentors {
+  @extend .d-flex;
+  @extend .gap-3;
+  @extend .text-center;
+  @extend .px-3;
+  overflow: auto;
+  max-width: 100vw;
+
+  .person {
+    flex: 1;
+    img {
+      max-width: 18rem;
+      border: 3px solid $white;
+    }
+  }
+}
+.promo#mentors {
+
+}

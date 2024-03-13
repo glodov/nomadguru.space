@@ -1,0 +1,35 @@
+<html lang="<%= $lang %>" <%- 'undefined' === typeof $colorMode || !$colorMode ? '' : `data-bs-theme="${$colorMode}"` %> data-gtag-id="<%= global['analytics']?.['gtag']?.['id'] ?? '' %>">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <% if (r['contentSecurityPolicy']) { %>
+        <meta http-equiv="Content-Security-Policy" content="<%= r['contentSecurityPolicy'] %>">
+        <% } %>
+        <meta charset="UTF-8">
+        <% if ('undefined' !== typeof googleMap) { %>
+            <link rel="preconnect" href="https://maps.googleapis.com/">
+        <% } %>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <% for (const file of $cssFiles) { %>
+            <link href="/css/<%= file.replaceAll('$theme', $theme) %>?<%= 'undefined' !== typeof $rendering && $rendering ? r['versionSlug'] : '' %>" rel="stylesheet">
+        <% } %>
+        
+        <%- include('head/icons') %>
+        <%- include('head/sharing') %>
+
+        <% if ($lang) { %>
+        <base href="/<%= $lang ? `${$lang}/` : '' %>">
+        <% } %>
+        <title><%= title + titleAffix %></title>
+        
+        <% 'undefined' !== typeof $alternates && Object.entries($alternates).forEach(([l, u]) => { %>
+            <link rel="alternate" hreflang="<%= l %>" href="<%= u %>" />
+        <% }) %>
+
+        <%- include('/_/tracking/gtag', { target: 'head' }) %>
+    </head>
+    <body class="<%= escapeClass(uri2class($uri)) %> <%= 'undefined' === typeof $bodyClass ? '' : $bodyClass %>" <%- 'undefined' !== typeof $navActive ? `data-nav-active="${$navActive}"` : '' %>>
+        <%- include('/_/tracking/gtag', { target: 'body' }) %>
+        <%- include('/_/policy/gdpr') %>
+

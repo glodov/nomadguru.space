@@ -1,0 +1,34 @@
+<%- include('/_/head'); %>
+
+<section class="d-flex flex-column justify-content-center align-items-center gap-5" style="height: 100vh">
+    <%- nano2html(
+        {
+            'logo': true,
+            '$alt': l('logoAlt', $l),
+            '$src': l('logoSrc', $l),
+            '$dark': l('logoDarkSrc', $l)
+        }
+    ) %>
+    <% if ('object' === typeof page) { %>
+    <%- renderEJSContent(page['content']) %>
+    <% } %>
+
+    <nav nw="langs" nwopts="switch:-1" class="container">
+        <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-4 gap-lg-5">
+            <% global.langs.forEach(function(item) { %>
+                <li>
+                    <%- nano2html(
+                        {
+                            'lang-btn': true,
+                            $class: 'btn btn-outline-secondary fs-3',
+                            $href: $alternates[item.code] || item.url,
+                            item
+                        }
+                    ) %>
+                </li>
+            <% }); %>
+        </ul>
+    </nav>
+</section>
+
+<%- include('/_/foot'); %>

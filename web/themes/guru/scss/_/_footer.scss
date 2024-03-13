@@ -1,0 +1,36 @@
+footer.root {
+    @extend .my-5;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .gap-3;
+    @extend .gap-md-4;
+    @extend .gap-lg-5;
+
+    .social {
+        @extend .mb-3;
+    }
+    cite {
+        @extend .container;
+        @extend .text-center;
+        @extend .d-flex;
+        @extend .flex-column;
+        @extend .flex-md-row;
+        @extend .flex-wrap;
+        @extend .gap-3;
+        @extend .justify-content-between;
+        @extend .align-items-center;
+        @extend .d-print-block;
+    }
+    .copy {
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .gap-3;
+        @extend .d-print-inline-block;
+        @extend .justify-content-center;
+    }
+    .settings {
+        @extend .d-print-none;
+        max-width: max-content;
+    }
+}

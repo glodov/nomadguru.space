@@ -1,0 +1,52 @@
+<header class="root sticky-top d-print-none" id="sticky-from-here">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="<%= $currentLang.url %>">
+                <%- nano2html(
+                    {
+                        logo: true,
+                        $src: l('logoWideSrc', $l),
+                        $dark: l('logoWideDarkSrc', $l),
+                        $alt: l('logoAlt', $l)
+                    }
+                ) %>
+            </a>
+            <button class="hamburger hamburger--slider d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false"
+                aria-label="<%= $l['toggleNav'] %>">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                <!-- <span class="navbar-toggler-icon"></span> -->
+            </button>
+            <div class="collapse navbar-collapse" id="headerNavbar">
+                <%- include('header/nav',
+                    {
+                        children: global.nav,
+                        ulClass: 'navbar-nav',
+                        liClass: 'nav-item',
+                        aClass: 'nav-link',
+                        level: 1,
+                        dropdownMode: true
+                    }
+                ); %>
+                <%- include('header/search'); %>
+                <%- include('header/lang'); %>
+                <div class="info d-lg-none">
+                    <%- include('header/contacts'); %>
+                    <%- include('header/social'); %>
+                    <div class="logo">
+                        <%- nano2html(
+                            {
+                                'logo': true,
+                                '$alt': l('logoAlt', $l),
+                                '$src': l('logoSrc', $l),
+                                '$dark': l('logoDarkSrc', $l)
+                            }
+                        ) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

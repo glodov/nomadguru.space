@@ -1,0 +1,10 @@
+<% if (global['social'] && Array.isArray(global.social) && global.social.length) { %>
+<div class="social">
+    <h4><%= l('We are on the social', $l) %></h4>
+    <nav>
+        <% global.social.forEach(item => { %>
+            <%- nano2html({ 'social-btn': item }) %>
+        <% }) %>
+    </nav>
+</div>
+<% } %>

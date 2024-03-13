@@ -1,0 +1,11 @@
+header.root {
+    .search {
+        @extend .input-group;
+        @extend .mb-3;
+        @extend .mb-xl-0;
+        @extend .align-items-stretch;
+        @extend .align-items-xl-center;
+        @extend .justify-content-center;
+        flex-basis: content;
+    }
+}

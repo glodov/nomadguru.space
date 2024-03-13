@@ -1,0 +1,22 @@
+/node_modules/
+# no need to store every change of the css, scss is the source
+/public/css/index.css
+/public/css/index.css.map
+/public/css/*/
+# public javascript
+/public/js/
+# no need to store rendered search, .yaml files are source
+/public/search/
+/public/search.json
+# no need to store sitemaps, .yaml files are source
+/public/sitemap.xml
+/public/sitemaps/
+# no need to store translations, .yaml > $l files data are source
+/public/translation.*
+
+/logs/
+/.nw/
+# too many images for the git repository
+/public/thumb/
+# no need to store module's information if it can be taken from the sources
+/public/modules/nw/sources/

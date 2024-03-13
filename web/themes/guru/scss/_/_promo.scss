@@ -1,0 +1,99 @@
+$arrow-animation-dy: 9px;
+@keyframes arrowY {
+  0%,
+  to {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  45%,
+  54% {
+    -moz-transform: translateY(-$arrow-animation-dy);
+    -ms-transform: translateY(-$arrow-animation-dy);
+    -webkit-transform: translateY(-$arrow-animation-dy);
+    -o-transform: translateY(-$arrow-animation-dy);
+    transform: translateY(-$arrow-animation-dy);
+  }
+}
+.promo {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  &.h-max {
+    position: relative;
+    min-height: calc(100vh - 4.5rem);
+    overflow: hidden;
+  }
+  .bg {
+    @extend .position-absolute;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    iframe,
+    img,
+    picture,
+    video {
+      width: auto !important;
+      height: 100% !important;
+    }
+  }
+  .block {
+    @extend .position-relative;
+    @extend .p-3;
+    @extend .p-md-4;
+    @extend .p-lg-5;
+    @extend .mx-3;
+    @extend .mx-md-2;
+    @extend .mx-lg-1;
+    @extend .mx-xl-0;
+    @extend .bg-white;
+    @extend .bg-opacity-81;
+    @extend .text-center;
+    max-width: 45rem;
+    z-index: 2;
+    > *:last-child {
+      @extend .mb-0;
+    }
+    &.bg-black {
+      @extend .bg-black;
+    }
+    &.w-100 {
+      max-width: 100%;
+    }
+  }
+  .content {
+    @extend .position-relative;
+    z-index: 2;
+  }
+  .arrow {
+    @extend .position-absolute;
+    @extend .py-3;
+    @extend .py-md-4;
+    @extend .py-lg-5;
+    bottom: 0;
+    z-index: 3;
+    animation: arrowY 1.8s infinite ease;
+    a {
+      @extend .fs-1;
+      @extend .text-white;
+      @extend .text-decoration-none;
+    }
+  }
+}
+@include color-mode(dark) {
+  .promo {
+    .block {
+      @extend .bg-black;
+      @extend .bg-opacity-81;
+    }
+  }
+}

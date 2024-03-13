@@ -1,0 +1,66 @@
+- name: $host
+  title: Публічний сайт
+  placeholder: https://yaro.page
+  type: nwUrl
+- name: $theme
+  title: Тема (вигляд)
+  type: nwTheme
+- name: $layout
+  title: Шаблон
+  type: nwLayout
+  depend:
+    - $theme
+- name: $catalog
+  title: Каталог
+  type: nwCatalog
+- name: $categoriesEnabled
+  title: Категорії
+  type: nwBoolean
+- name: $categoriesNested
+  title: Вкладені категорії
+  type: nwBoolean
+- name: $javascriptModules
+  title: Модулі JS
+  type: nwFileUris
+  disabled: true
+- name: $cssFiles
+  title: Модулі CSS
+  type: nwFileUris
+  disabled: true
+- name: $l
+  title: Переклад
+  type: nwLocaleDict
+- name: $redirect
+  title: Перенаправлення
+  type: nwDataUri
+- name: $uri
+  title: Посилання на дані
+  type: nwDataUri
+- name: $uid
+  title: Ідентифікатор даних
+  type: nwDataUid
+- name: $productsClass
+  title: Стиль товарів
+  type: nwClassList
+  allow:
+    - products deposits credits properties cards
+    - no-filter no-order no-compare
+    - container container-fluid
+    - pb-5
+- name: $productsFacadeOnly
+  title: Товари тільки списком
+  type: nwBoolean
+
+- name: ogImage
+  title: Світлина для мереж
+  type: nwImage
+- name: firstPerPage
+  title: Перші видимі
+- name: postsPerPage
+  title: Довантаження по
+- name: titleAffix
+  title: Допис до мета заголовку
+- name: category
+  title: Категорія (каталогу)
+- name: title
+  title: Заголовок

@@ -1,0 +1,22 @@
+<%- include('/_/head'); %>
+
+<%- include('/_/header'); %>
+
+<% if (page['image']) { %>
+    <%- nano2html({
+        promo: {
+            height: 'max',
+            arrow: '#content',
+            background: { img: page['image'] },
+            block: { h1: page['title'] || title }
+        } 
+    }) %>
+<% } %>
+
+<section id="content">
+    <%- renderEJSContent(page['content']) %>
+</section>
+
+<%- include('/_/footer'); %>
+
+<%- include('/_/foot'); %>

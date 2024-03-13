@@ -1,0 +1,46 @@
+<ul class="<%= ulClass %>">
+    <% children && children.forEach(function(child) { %>
+        <% if (child['children'] && child.children.length) { %>
+            <% if (level > 2) { %>
+                <li class="<%= liClass %>">
+                    <a class="<%= aClass %>" href="<%= child.url.includes('.html') ? child.url : '#' + child.url %>" role="button">
+                        <% if (child.icon) { %>
+                            <span class="fs-4 icon-<%= child.icon %>"></span>
+                        <% } %>
+                        <span><%= child.title %></span>
+                    </a>
+                    <%- include('nav', { children: child.children, ulClass: 'navbar-nav', liClass: 'nav-item', aClass: 'nav-link', level: level + 1 }); %>
+                </li>
+            <% } else { %>
+                <li class="<%= liClass %> <%= dropdownMode ? 'dropdown' : '' %>">
+                    <% if (dropdownMode) { %>
+                    <a class="<%= aClass %> dropdown-toggle" href="<%= child.url.includes('.html') ? child.url : '#' + child.url %>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <% if (child.icon) { %>
+                            <span class="icon-<%= child.icon %> fs-4"></span>
+                        <% } %>
+                        <span><%= child.title %></span>
+                    </a>
+                    <%- include('nav', { children: child.children, ulClass: `dropdown-menu ${child['$class'] || ''}`, liClass: '', aClass: 'dropdown-item', level: level + 1 }); %>
+                    <% } else { %>
+                    <a class="<%= aClass %>" href="<%= child.url.includes('.html') ? child.url : '#' + child.url %>">
+                        <% if (child.icon) { %>
+                            <span class="fs-4 icon-<%= child.icon %>"></span>
+                        <% } %>
+                        <span><%= child.title %></span>
+                    </a>
+                    <%- include('nav', { children: child.children, ulClass: `navbar-nav ${child['$class'] || ''}`, liClass: 'nav-item', aClass: 'nav-link', level: level + 1 }); %>
+                    <% } %>
+                </li>
+            <% } %>
+        <% } else { %>
+            <li class="<%= liClass %>">
+                <a class="<%= aClass %>" href="<%= child.url.includes('.html') ? child.url : '#' + child.url %>">
+                    <% if (child.icon) { %>
+                        <span class="fs-4 icon-<%= child.icon %>"></span>
+                    <% } %>
+                    <span><%= child.title %></span>
+                </a>
+            </li>
+        <% } %>
+    <% }); %>
+</ul>

@@ -1,0 +1,29 @@
+<footer class="root" id="footer">
+    <div class="logo">
+        <%- nano2html(
+            {
+                'logo': true,
+                '$alt': l('logoAlt', $l),
+                '$src': l('logoSrc', $l),
+                '$dark': l('logoDarkSrc', $l)
+            }
+        ) %>
+    </div>
+
+    <%- include('header/contacts'); %>
+    <%- include('header/social'); %>
+
+    <cite>
+        <div class="copy">
+            <p>&copy; <%= l('copyTitle', $l) %>.</p>
+            <p><%= l('copyNo', $l) %>.</p>
+            <p><%= l('copyLicense', $l) %>.</p>
+        </div>
+        <form class="settings">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="settingsDarkMode" nw-hotkey="cmd+shift+d" nw="DarkMode">
+                <label class="form-check-label" for="settingsDarkMode"><%= l('darkMode', $l) %></label>
+              </div>
+        </form>
+    </cite>
+</footer>

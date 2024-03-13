@@ -1,0 +1,16 @@
+<% if ('undefined' !== typeof title) { %>
+    <meta property="og:title" content="<%= title + titleAffix %>">
+<% } %>
+<% if ('undefined' !== typeof description) { %>
+    <meta property="og:description" content="<%= description %>">
+<% } %>
+<% if ('undefined' !== typeof ogImage && ogImage) { %>
+    <meta property="og:image" content="<%= $host + ogImage %>">
+<% } else if ('undefined' !== typeof image && image) { %>
+    <meta property="og:image" content="<%= $host + image %>">
+<% } else { %>
+    <meta property="og:image" content="<%= $host + $l['logoSrc'] %>">
+<% } %>
+
+<meta property="og:url" content="<%= $host + $uri %>">
+<meta name="twitter:card" content="summary_large_image">

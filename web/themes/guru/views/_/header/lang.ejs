@@ -1,0 +1,30 @@
+<ul class="navbar-nav lang align-items-center">
+    <li class="dropdown">
+        <%- nano2html(
+            {
+                'lang-btn': true,
+                $class: 'nav-link dropdown-toggle',
+                $href: '#',
+                $role: 'button',
+                '$data-bs-toggle': 'dropdown',
+                '$aria-expanded': "false",
+                $title: l('Change language', $l),
+                item: $currentLang
+            }
+        ) %>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <% global.langs.forEach(function(item) { %>
+                <li>
+                    <%- nano2html(
+                        {
+                            'lang-btn': true,
+                            $class: item.code === $lang ? 'dropdown-item active' : 'dropdown-item',
+                            $href: $alternates[item.code] || item.url,
+                            item
+                        }
+                    ) %>
+                </li>
+            <% }); %>
+        </ul>
+    </li>
+</ul>

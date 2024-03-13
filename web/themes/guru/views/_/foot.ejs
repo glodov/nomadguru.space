@@ -1,0 +1,23 @@
+<% const isRendering = 'undefined' !== typeof $rendering && $rendering; %>
+<!-- Modal Structure -->
+        <!-- Modal Structure -->
+        <%# Gallery modal %>
+        <%- include('/_/modal/gallery') %>
+        <%# Search modal %>
+        <%- include('/_/modal/search') %>
+
+        <% if ('undefined' !== typeof $javascriptModules) $javascriptModules.forEach(file => { %>
+            <script src="/js/<%= file.replaceAll('$theme', $theme) %>?<%= isRendering ? r['versionSlug'] : '' %>" type="text/javascript"></script>
+        <% }); %>
+        <% if ('undefined' !== typeof $googleMap && env['GOOGLE_API_KEY']) { %>
+            <script nonce="<%= r['nonce'] %>" src="https://maps.googleapis.com/maps/api/js?key=<%= env.GOOGLE_API_KEY %>&language=<%= $currentLang.locale %>&callback=initMap" async defer></script>
+        <% } %>
+        <% if ('undefined' !== typeof $javascriptExtra) { %>
+            <script src="<%= $javascriptExtra.replace('{version}', isRendering ? r['versionSlug'] : '' ) %>" type="text/javascript"></script>
+        <% } %>
+        <% if (!isRendering) { %>
+            <script src="/js/ejs.min.js" type="text/javascript"></script>
+            <script src="/js/nw/editor.min.js" type="text/javascript"></script>
+        <% } %>
+    </body>
+</html>

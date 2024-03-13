@@ -1,0 +1,58 @@
+<% if ('undefined' === typeof promos) { %>
+    <% if (page['imageUrl'] || page['image'] || 'undefined' !== typeof image) { %>
+    <section class="header-slider">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="<%= page['imageUrl'] || page['image'] || image %>" class="bg" alt="<%= page['title'] %>">
+                <div class="carousel-caption <%= 'undefined' === typeof promoClass ? '' : promoClass %>">
+                    <h1 class="display-4"><%= page['title'] %></span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <% } %>
+<% } else { %>
+    <section class="header-slider">
+        <div id="promoCarousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <% promos.forEach(function(item, index) { %>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="<%= index %>" class="active"
+                    aria-current="true" aria-label="<%= $l['slide'] %> <%= index + 1 %>"></button>
+                <% }); %>
+            </div>
+            <div class="carousel-inner">
+                <% promos.forEach(function(item, index) { %>
+                <div class="carousel-item <%= index ? '' : 'active' %>">
+                    <img src="<%= item.img %>" class="bg" alt="<%= item.title %>">
+                    <div class="carousel-caption <%= item.cssBlock %>">
+                        <h3 class="display-4"><%= item.title %></h3>
+                        <main>
+                            <%- renderEJSContent(item['content'] || item['text'], 'div') %>
+                        </main>
+                        <% if (item.href) { %>
+                        <a href="<%= item.href %>" class="btn btn-<%= item.cssBtn %>" <%- item.options || '' %>>
+                            <% if (item.btnIcon) { %>
+                                <span class="icon-<%= item.btnIcon %> fs-3"></span>
+                            <% } %>
+                            <% if (item.btnText) { %>
+                                <span><%- item.btnText %></span>
+                            <% } else { %>
+                                <span><%- $l['learnMore'] %></span>
+                            <% } %>
+                        </a>
+                        <% } %>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"><%= $l['goBack'] %></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"><%= $l['goForward'] %></span>
+            </button>
+        </div>
+    </section>
+<% } %>

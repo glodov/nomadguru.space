@@ -1,0 +1,20 @@
+<%- include('/_/head'); %>
+
+<%- include('/_/header'); %>
+
+<section class="container my-5">
+    <h1 class="mb-5"><%= l('Page not found', $l) %></h1>
+    <div class="alert alert-danger">
+        <code><%= error %></code>
+    </div>
+</section>
+
+<section class="content">
+    <% if ('object' === typeof page && page) { %>
+    <%- renderEJSContent(page['content']) %>
+    <% } %>
+</section>
+
+<%- include('/_/footer'); %>
+
+<%- include('/_/foot'); %>

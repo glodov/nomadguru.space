@@ -1,0 +1,70 @@
+{
+  "name": "nanoweb",
+  "version": "0.0.1",
+  "description": "Static site generator on Javascript.",
+  "main": "server.js",
+  "dependencies": {
+    "archiver": "^6.0.1",
+    "bootstrap": "^5.3.2",
+    "crypto": "^1.0.1",
+    "csvtojson": "^2.0.10",
+    "dom-parser": "^1.1.5",
+    "dotenv": "^16.3.1",
+    "dotnet": "^1.1.4",
+    "ejs": "^3.1.9",
+    "html-minifier": "^4.0.0",
+    "mime": "^4.0.0",
+    "moment": "^2.30.1",
+    "moment-duration-format": "^2.3.2",
+    "node-cron": "^3.0.3",
+    "sharp": "^0.33.1",
+    "terser": "^5.27.1",
+    "unzipper": "^0.10.14",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "fs-extra": "^11.2.0",
+    "hamburgers": "^1.2.1",
+    "nodemon": "^3.0.1",
+    "sass": "^1.70.0"
+  },
+  "scripts": {
+    "compile-themes": "node ./compile-themes.js",
+    "compile-images": "zip -r images.zip public/images",
+    "build-themes": "node ./compile-themes.js --minify",
+    "watch-themes": "node ./compile-themes.js --watch",
+    "protect-dist": "rm ./dist/.env ./dist/output.json ./dist/send.php ./dist/config.php || true",
+    "nw-cache": "rm -r .nw/* && rm -r ./dist/*",
+    "render": "node publish.js version | node render.js && cp ../remote/send.php ./dist/ && cp ../remote/config.php ./dist/",
+    "render-index": "echo '{\"version\":\"index\"}' | node render.js --index",
+    "render-search": "echo '{\"version\":\"search\"}' | node render.js --search",
+    "render-full": "npm run build-themes && npm run render",
+    "copy-dist": "node public.js",
+    "copy-legacy": "python ./copy-legacy.py --no-csv --no-images",
+    "copy-legacy-with-images": "python ./copy-legacy.py --no-csv",
+    "copy-legacy-full": "python ./copy-legacy.py",
+    "publish-orig": "npm run render-full && npm run protect-dist && node publish.js",
+    "publish": "npm run render-full && npm run copy-dist && node publish-start.js && python archive.py && node publish-send.js",
+    "start": "concurrently \"npm:watch-themes\" \"nodemon --watch ../data --ext yaml,txt,csv --watch ./src --ext yaml,js,csv --watch ./themes --ext ejs,js ./server.js\"",
+    "feedbacks": "python ./feedbacks.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaro-rasta/nanoweb.git"
+  },
+  "keywords": [
+    "ssg",
+    "static",
+    "site",
+    "static",
+    "website",
+    "generator"
+  ],
+  "author": "Yaro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaro-rasta/nanoweb/issues"
+  },
+  "homepage": "https://github.com/yaro-rasta/nanoweb#readme"
+}

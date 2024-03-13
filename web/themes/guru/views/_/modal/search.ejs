@@ -1,0 +1,53 @@
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title fs-5" id="searchModalLabel">
+                    <%= l('Search title', $l) %>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<%= l('Close label', $l) %>"><%- l('Close modal button', $l) %></button>
+            </div>
+            <div class="modal-body search-body">
+                <!-- Search Input Field -->
+                <form class="input-group" id="searchForm">
+                    <input class="form-control form-control-lg" type="search" name="q"
+                        placeholder="<%= l('Search placeholder', $l) %>" aria-label="<%= l('Search label', $l) %>" form="searchForm" id="searchInput">
+                    <button class="btn btn-primary btn-lg" type="submit" form="searchForm" id="searchSubmit">
+                        <span class="icon-search fs-2"></span>
+                        <span><%= l('Search btn', $l) %></span>
+                    </button>
+                </form>
+                <div id="searchResults" class="search-results">
+                </div>
+                <template id="searchSummaryTemplate">
+                    <header class="summary">
+                        <div class="on-found">
+                            <span class="badge bg-success" nw="found"></span>
+                            <%= l('results found', $l) %>
+                        </div>
+                        <div class="off-found"><%= l('No results found', $l) %></div>
+                    </header>
+                </template>
+                <template id="searchResultTemplate">
+                    <article>
+                        <figure>
+                            <a href="#" nw="url"><img src="" alt="" nw="img"></a>
+                        </figure>
+                        <footer>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" nw="path"></ol>
+                            </nav>
+                            <a href="#" nw="url">
+                                <span nw="title"></span>
+                            </a>
+                            <p nw="desc"></p>
+                            <a href="#" class="btn btn-sm btn-outline-info d-none" nw="url">
+                                <%= l('searchReadMore', $l) %>
+                            </a>
+                        </footer>
+                    </article>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>

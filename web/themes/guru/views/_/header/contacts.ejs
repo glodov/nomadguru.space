@@ -1,0 +1,8 @@
+<% if (global['contacts'] && Array.isArray(global.contacts) && global.contacts.length) { %>
+<div class="contacts">
+    <h3><%= l('Contacts', $l) %></h3>
+    <% global.contacts.forEach(contact => { %>
+        <%- nano2html({ contact })  %>
+    <% }) %>
+</div>
+<% } %>

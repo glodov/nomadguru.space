@@ -1,0 +1,61 @@
+.navbar-brand {
+  max-width: calc(100% - 4.5rem);
+  img {
+    max-width: 100%;
+    max-height: 3rem;
+  }
+}
+header.root {
+  background-color: $white;
+  .navbar-nav {
+    @extend .flex-grow-1;
+    @extend .flex-row;
+    @extend .justify-content-between;
+    @extend .justify-content-lg-around;
+    // font-family: $headings-font-family;
+    @extend .h5;
+    width: 100%;
+    &.lang {
+      @extend .justify-content-center;
+    }
+  }
+  .lang {
+    flex: 1 1;
+    .nav-link,
+    .dropdown-menu .dropdown-item {
+      @extend .d-flex;
+      @extend .gap-2;
+      @extend .align-items-center;
+    }
+    img {
+      max-height: 2rem !important;
+    }
+  }
+  .logo, .navbar-collapse.show {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .gap-3;
+  }
+  .navbar-collapse {
+    @extend .py-5;
+    @extend .py-lg-0;
+    @extend .text-center;
+    &.show {
+      max-height: calc(100vh - 4rem);
+      overflow: auto;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  header.root {
+    .navbar-nav {
+      width: auto;
+    }
+  }
+}
+@include color-mode(dark) {
+  header.root {
+    background-color: $black;
+  }
+}

@@ -1,0 +1,12 @@
+<% if (global['gdpr']) { %>
+    <div id="gdprConsentBox" class="gdpr-consent-box position-fixed bottom-0 end-0 p-3 bg-black bg-opacity-81" style="z-index: 1000; display: none;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%= global.gdpr['title'] || '' %></h5>
+                <div class="card-text mb-3"><%- renderEJSContent(global.gdpr['content'] || '') %></div>
+                <button name="accept" class="btn btn-success"><%- global.gdpr['btnAccept'] %></button>
+                <button name="decline" class="btn btn-outline-danger"><%- global.gdpr['btnDecline'] %></button>
+            </div>
+        </div>
+    </div>
+<% } %>

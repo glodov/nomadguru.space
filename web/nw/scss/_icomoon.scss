@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'nwicon';
+  src:  url('fonts/icomoon.eot?4vnj5y');
+  src:  url('fonts/icomoon.eot?4vnj5y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4vnj5y') format('truetype'),
+    url('fonts/icomoon.woff?4vnj5y') format('woff'),
+    url('fonts/icomoon.svg?4vnj5y#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nwi-"], [class*=" nwi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nwicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nwi-at:before {
+  content: "\e900";
+}
+.nwi-chevron-down:before {
+  content: "\e901";
+}
+.nwi-chevron-left:before {
+  content: "\e902";
+}
+.nwi-chevron-right:before {
+  content: "\e903";
+}
+.nwi-chevron-up:before {
+  content: "\e904";
+}
+.nwi-code:before {
+  content: "\e905";
+}
+.nwi-download:before {
+  content: "\e906";
+}
+.nwi-edit:before {
+  content: "\e907";
+}
+.nwi-edit-2:before {
+  content: "\e908";
+}
+.nwi-edit-3:before {
+  content: "\e909";
+}
+.nwi-external-link:before {
+  content: "\e90a";
+}
+.nwi-feather:before {
+  content: "\e90b";
+}
+.nwi-file:before {
+  content: "\e90c";
+}
+.nwi-file-minus:before {
+  content: "\e90d";
+}
+.nwi-file-plus:before {
+  content: "\e90e";
+}
+.nwi-file-text:before {
+  content: "\e90f";
+}
+.nwi-folder:before {
+  content: "\e910";
+}
+.nwi-folder-minus:before {
+  content: "\e911";
+}
+.nwi-folder-plus:before {
+  content: "\e912";
+}
+.nwi-dir-tree:before {
+  content: "\e913";
+}
+.nwi-grid:before {
+  content: "\e914";
+}
+.nwi-tags:before {
+  content: "\e915";
+}
+.nwi-file-image:before {
+  content: "\e916";
+}
+.nwi-info:before {
+  content: "\e917";
+}
+.nwi-lock:before {
+  content: "\e918";
+}
+.nwi-log-in:before {
+  content: "\e919";
+}
+.nwi-log-out:before {
+  content: "\e91a";
+}
+.nwi-mail:before {
+  content: "\e91b";
+}
+.nwi-map-pin:before {
+  content: "\e91c";
+}
+.nwi-maximize:before {
+  content: "\e91d";
+}
+.nwi-more-vertical:before {
+  content: "\e91e";
+}
+.nwi-file-audio:before {
+  content: "\e91f";
+}
+.nwi-attachments:before {
+  content: "\e920";
+}
+.nwi-phone:before {
+  content: "\e921";
+}
+.nwi-phone-call:before {
+  content: "\e922";
+}
+.nwi-play:before {
+  content: "\e923";
+}
+.nwi-plus:before {
+  content: "\e931";
+}
+.nwi-save:before {
+  content: "\e92b";
+}
+.nwi-settings:before {
+  content: "\e924";
+}
+.nwi-category:before {
+  content: "\e92c";
+}
+.nwi-terminal:before {
+  content: "\e92d";
+}
+.nwi-tool:before {
+  content: "\e932";
+}
+.nwi-trash:before {
+  content: "\e925";
+}
+.nwi-trash-full:before {
+  content: "\e926";
+}
+.nwi-unlock:before {
+  content: "\e92e";
+}
+.nwi-user:before {
+  content: "\e927";
+}
+.nwi-user-plus:before {
+  content: "\e928";
+}
+.nwi-user-x:before {
+  content: "\e92f";
+}
+.nwi-users:before {
+  content: "\e929";
+}
+.nwi-file-video:before {
+  content: "\e92a";
+}
+.nwi-times:before {
+  content: "\e930";
+}

@@ -1,0 +1,56 @@
+<!-- 
+    @todo improve the solution.
+ -->
+<main>
+    <ul class="list-group">
+    <% (input['loaded'] || []).forEach(inputUri => {
+        const rendered = [];
+        const missed = [];
+        const vars = loaded.filter(({ uri }) => inputUri === uri);
+    %>
+        <% (schema || []).forEach(rule => {
+            vars.forEach(({ uri, data: item }) => {
+                if ('undefined' !== typeof item[rule['name']]) { 
+                    rendered.push(rule['name']);
+                    const nwType = window.nwTypes[rule['type']] || window.nwTypes['nwComponent'] || null;
+                    if (!nwType) {
+                        console.error('Cannot find a nan•web type in rule', rule);
+                        return;
+                    }
+                %>
+                    <li class="list-group-item list-group-item-action <%= rule['type'] %>" nwe="<%= rule['name'] %>" tabindex="0">
+                        <div>
+                            <%- nwType.read({ field: rule['name'], item, data, rule, input }) %>
+                        </div>
+                    </li>
+                <% } else {
+                    missed.push(rule['name']); 
+                } %>
+            <% }); 
+        });
+        vars.forEach(({ uri, data: item }) => {
+            Object.entries(item).forEach(([field, value]) => {
+                if (rendered.includes(field)) return;
+            %>
+                <li class="list-group-item disabled" aria-disabled="true">
+                    <em><%= field %>: <%= value %></em>
+                </li>
+            <% }) %>
+        <% }) %>
+    <% }) %>
+    </ul>
+</main>
+<aside class="nw-loaded">
+    <section class="nw-editor">
+    </section>
+    <select multiple nwe="options.loaded" class="form-select">
+        <% loaded.forEach(({ uri, data: item }, i) => { 
+            let selected = loaded.length - 1 === i;
+            if (input['loaded']) selected = input.loaded.includes(uri);
+            %>
+            <option value="<%= uri %>" <%= selected ? 'selected' : '' %>>
+                <%= uri.slice(0, uri.length - '.yaml'.length) %>
+            </option>
+        <% }) %>
+    </select>
+</aside>

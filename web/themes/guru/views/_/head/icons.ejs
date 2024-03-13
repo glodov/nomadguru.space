@@ -1,0 +1,4 @@
+<!-- Favicon for various platforms -->
+<% for (const icon of $favicons) { %>
+    <link rel="<%= icon['rel'] || 'icon' %>" href="<%= icon['href'] %>" sizes="<%= icon['sizes'] %>" type="<%= icon['type'] || 'image/icon' %>">
+<% } %>

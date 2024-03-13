@@ -1,0 +1,7 @@
+section.content {
+    @extend .container;
+    @extend .py-3;
+    @extend .py-md-4;
+    @extend .py-lg-5;
+    max-width: 45rem;
+}
