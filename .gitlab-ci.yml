@@ -1,4 +1,3 @@
-# requiring the environment of NodeJS 10
 image: node:21
 
 before_script:
