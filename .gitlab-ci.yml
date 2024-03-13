@@ -13,7 +13,7 @@ pages:
   script:
     - pwd
     - npm run render-ssg
-    - npm run copy-dist
+    - npm run copy-dist-v
   artifacts:
     paths:
     - web/dist

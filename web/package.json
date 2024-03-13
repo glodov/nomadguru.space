@@ -42,6 +42,7 @@
     "render-full": "npm run build-themes && npm run render",
     "render-ssg": "echo '{\"version\":\"ssg\"}' | node render.js",
     "copy-dist": "node public.js",
+    "copy-dist-v": "node public.js --verbose",
     "copy-legacy": "python ./copy-legacy.py --no-csv --no-images",
     "copy-legacy-with-images": "python ./copy-legacy.py --no-csv",
     "copy-legacy-full": "python ./copy-legacy.py",

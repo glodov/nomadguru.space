@@ -32,7 +32,7 @@ page:
               $class: mx-auto mb-5
               p: |
                 "... Ми допомагаємо іншим освоїти свій голос, сучасні New Age та стародавні етно-інструменти, вчимо грі на гітарі, потоковій електронній аранжировці та взаємодії в музиці!
-            - $class: d-flex flex-row
+            - $class: d-flex flex-row flex-wrap
               nav:
                 - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
                   div:

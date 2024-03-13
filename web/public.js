@@ -54,6 +54,7 @@ const copyStaticFiles = (srcDir, destDir) => {
             const dir = path.dirname(destPath);
             if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
             fs.copyFileSync(file, destPath);
+            if (process.argv.includes('--verbose')) console.log(file);
             if (fs.existsSync(destPath)) {
                 ++copied;
             } else {

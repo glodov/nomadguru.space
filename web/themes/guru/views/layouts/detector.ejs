@@ -13,7 +13,7 @@
     <%- renderEJSContent(page['content']) %>
     <% } %>
 
-    <nav nw="langs" nwopts="switch:-1" class="container">
+    <nav nw="langs" nwopts="<%= 'string' === typeof $langsOpts ? $langsOpts : '' %>" class="container">
         <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-4 gap-lg-5">
             <% global.langs.forEach(function(item) { %>
                 <li>
