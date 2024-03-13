@@ -1,0 +1,35 @@
+<IfModule mod_headers.c>
+    # Enable ETags
+    FileETag MTime Size
+
+    # Set the environment variable "no-gzip" if no ETags match. This is an optimization for mod_deflate
+    SetEnvIfNoCase Request_URI \.html$ no-gzip
+
+    <FilesMatch "\.html$">
+        # Set a Cache-Control header for HTML files
+        Header set Cache-Control "max-age=43200, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Close access for /.env, /.htaccess, /output.json, /config.php, /version.json files
+<FilesMatch "^(\.env|\.htaccess|output\.json|config\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_php.c>
+    php_value upload_max_filesize 256M
+    php_value post_max_size 256M
+    php_value memory_limit 512M
+    php_value max_execution_time 300
+</IfModule>
+
+
+AddDefaultCharset UTF-8
+
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]

@@ -25,14 +25,15 @@ page:
       - p: The smartest people work every day to provide the best service and to make our clients happy
       - ul:
         - person:
-          image: 
-          name: Ната Турбина
-          title: Customers Support
-          desc: Eva is the voice of our brand. She spends hours to make our clients feel care and enjoy communication with the company. If you have any suggestions or ideas you can write her.
+            image: ''
+            name: Ната Турбина
+            title: Customers Support
+            desc: Eva is the voice of our brand. She spends hours to make our clients feel care and enjoy communication with the company. If you have any suggestions or ideas you can write her.
         - person:
-          name: Julia Bush
-          title: Design Director
-          desc: Julia takes care of everything you can see. She spent five years in London learning visual communication. She uses her knowledge to make the world a little more beautiful.
+            image: ''
+            name: Julia Bush
+            title: Design Director
+            desc: Julia takes care of everything you can see. She spent five years in London learning visual communication. She uses her knowledge to make the world a little more beautiful.
     - promo:
       - h2: Нужно петь чтобы жить
       - p: иначе дрова...
@@ -60,11 +61,12 @@ page:
             - td: 
               - h3: Искусство презентации в полевых условиях
               - person:
-                name: Елена Жданова
-                title: креативный директор
-                company:
-                  name: DD agency
-                  link: https://google.com
+                  image: ''
+                  name: Елена Жданова
+                  title: креативный директор
+                  company:
+                    name: DD agency
+                    link: https://google.com
               - p: Елена поделиться своим опытом создания презентаций, которые смогли изменить продуктовую стратегию самого известного digital агенства.
           - tr:
             - td: 11:30 – 12:30
@@ -75,11 +77,12 @@ page:
             - td:
               - h3: Плюсы и минусы новых медиа форматов
               - person:
-                name: Галина Логинова
-                title: арт-директор
-                company:
-                  name: MAG
-                  link: https://google.com
+                  image: ''
+                  name: Галина Логинова
+                  title: арт-директор
+                  company:
+                    name: MAG
+                    link: https://google.com
               - p: Галина раскроет ключевые цифры новых медиа форматов.
           - tr:
             - td: 15:30 – 17:00
@@ -97,28 +100,28 @@ page:
       - footer:
         - $href: '#buy'
           a: Купить билет
-    - reviews:
-      - text: You can't connect the dots looking forward, you can only connect them looking backwards.
-        person:
-          name: Alex Larkins
-          title: Founder
-          company:
-            name: Pic Pen studio
-            link: https://google.com
-      - text: Однажды я курил бамбук и медленно разлагался, но вдруг пришла Турбина и скурила мой бамбук. Больше ничего не оставалось делать как петь. И я запел!!! Теперь я зарабатываю пением на м. Арсенальная и продолжаю наслаждаться ароматами бамбука
-        person:
-          name: Samuel Willson
-          title: Creative director
-          company:
-            name: DD agency
-            link: https://google.com
-      - text: I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.
-        person:
-          name: Sarah Lewin
-          title: Projects manager
-          company:
-            name: Pixels
-            link: https://google.com
+    # - reviews:
+    #   - text: You can't connect the dots looking forward, you can only connect them looking backwards.
+    #     person:
+    #       name: Alex Larkins
+    #       title: Founder
+    #       company:
+    #         name: Pic Pen studio
+    #         link: https://google.com
+    #   - text: Однажды я курил бамбук и медленно разлагался, но вдруг пришла Турбина и скурила мой бамбук. Больше ничего не оставалось делать как петь. И я запел!!! Теперь я зарабатываю пением на м. Арсенальная и продолжаю наслаждаться ароматами бамбука
+    #     person:
+    #       name: Samuel Willson
+    #       title: Creative director
+    #       company:
+    #         name: DD agency
+    #         link: https://google.com
+    #   - text: I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long.
+    #     person:
+    #       name: Sarah Lewin
+    #       title: Projects manager
+    #       company:
+    #         name: Pixels
+    #         link: https://google.com
     - gallery:
       title: Прошедшие мероприятия
       desc: Фотографии с нашей тусы

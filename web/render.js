@@ -4,7 +4,7 @@ const path = require('node:path');
 const { ensureDirectory, calculateFileHash, saveYAML, loadYAML } = require('./src/fs');
 const { versionSlug, runtime } = require('./src/runtime');
 const { GREEN, NANO, RESET, RED, OK, FAIL, print, progress, spent, mem } = require('./src/cli');
-const { loadEverything, renderFile } = require('./src/render/core');
+const { loadEverything, renderFile, readData, processModules } = require('./src/render/core');
 
 require('dotenv').config();
 
@@ -84,7 +84,13 @@ if (process.argv.includes('--index')) {
 const { errors, dataFiles, allSorted, all, refers, langs, cats, globalUris, addon } = loadEverything();
 
 async function renderUri(args) {
-    const { html } = await renderFile(args);
+    const { data, deps } = readData(args);
+    if (data['$theme']) {
+        runtime['$theme'] = data['$theme'];
+    }
+    const mod = await processModules(args.renderModules, { ...args, data, deps });
+
+    const { html } = mod;
     if (html && html['cached']) {
         return { cached: true, html };
     }

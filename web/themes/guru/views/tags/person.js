@@ -1,6 +1,6 @@
 module.exports = function (content) {
     const person = content['person'];
-    return {
+    const tag = {
         $class: 'person',
         div: [
             { figure: { $class: 'rounded-circle', img: person['image'], $alt: person['name'] } },
@@ -9,4 +9,5 @@ module.exports = function (content) {
             { p: person['desc'] },
         ]
     };
+    return tag;
 };

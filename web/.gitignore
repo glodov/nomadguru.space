@@ -17,6 +17,7 @@
 
 /logs/
 /.nw/
+.env
 # too many images for the git repository
 /public/thumb/
 # no need to store module's information if it can be taken from the sources
