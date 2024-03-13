@@ -11,22 +11,36 @@ async function renderGallery(args, mods) {
     if (data['ogImage'] && !data['ogImage'].includes('://')) {
         out.push(await cropImage(data.ogImage, data));
     }
-    if (data['page']?.['image']) {
-        if (Array.isArray(data.page.image)) {
-            data.page.image.forEach(async img => {
-                const item = await cropImage(img, data);
-                out.push(item);
-            });
-        } else {
-            out.push(await cropImage(data.page.image, data));
-        }
-    }
+    const images = [];
+
     if (runtime['SEARCH_GALLERY']) {
         const image = mods['search']?.['out']?.['image'] || '';
         if (image) {
             out.push(await cropImage(image, { gallery: runtime['SEARCH_GALLERY'] }));
         }
     }
+
+    async function findImagesRecursive(obj) {
+        for (const key in obj) {
+            if (key === 'image') {
+                if (Array.isArray(obj[key])) {
+                    obj[key].forEach(async img => {
+                        const item = await cropImage(img, data);
+                        out.push(item);
+                    });
+                } else {
+                    const item = await cropImage(obj[key], data);
+                    out.push(item);
+                }
+            } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                findImagesRecursive(obj[key]);
+            }
+        }
+    }
+
+    // check for all ['image'] inside the data['page']
+    await findImagesRecursive(data['page']);
+        
     return { key: 'gallery', out };
 }
 

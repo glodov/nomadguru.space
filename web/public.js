@@ -72,8 +72,12 @@ async function publish() {
     console.log(`\nCopying ${path.relative(__dirname, STATIC_DIR)} ${NANO} ${path.relative(__dirname, DIST_DIR)}`);
     copyStaticFiles(STATIC_DIR, DIST_DIR);
     if (GALLERY_THUMB_DIR) {
-        console.log(`\nCopying ${path.relative(__dirname, GALLERY_THUMB_DIR)} ${NANO} ${path.relative(__dirname, DIST_DIR)}`);
-        copyStaticFiles(GALLERY_THUMB_DIR, DIST_DIR);
+        if (fs.existsSync(GALLERY_THUMB_DIR)) {
+            console.log(`\nCopying ${path.relative(__dirname, GALLERY_THUMB_DIR)} ${NANO} ${path.relative(__dirname, DIST_DIR)}`);
+            copyStaticFiles(GALLERY_THUMB_DIR, DIST_DIR);
+        } else {
+            console.log(`\n ${RED}${FAIL}${RESET} Directory does not exist ${RED}${NANO} ${path.relative(__dirname, GALLERY_THUMB_DIR)}${RESET}`);
+        }
     }
 }
 

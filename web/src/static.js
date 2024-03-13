@@ -173,7 +173,13 @@ async function cropFile(staticFilePath, imagePattern = '') {
         if (!fs.existsSync(origFilePath)) {
             return reject(`File does not exist ${origFilePath}`);
         }
-        const { width, height } = await getOriginalDimensions(origFilePath);
+        let res;
+        try {
+            res = await getOriginalDimensions(origFilePath);
+        } catch (error) {
+            return reject(`Cannot read dimensions of ${origFilePath}`);
+        }
+        const { width, height } = res;
         let aspectRatio;
         if (aspectRatioHeight && aspectRatioWidth) {
             aspectRatio = aspectRatioWidth / aspectRatioHeight;

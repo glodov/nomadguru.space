@@ -81,17 +81,17 @@ page:
             - $class: mentors
               nav:
               - person:
-                  image: /images/school/mentors/Eugene@1-1-h300px.jpeg
+                  image: /images/school/mentors/Eugene.jpg
                   name: Евгений Артеменко
                   title: Voice Couch
                   desc: Музыкант-мультиинструменталист, диджей и продюсер
               - person:
-                  image: /images/school/mentors/Nata@1-1-h300px.jpeg
+                  image: /images/school/mentors/Nata.jpg
                   name: Ната Турбина
                   title: CEO, Voice Couch
                   desc: Идейный вдохновитель NOMAD GURU Ментор, Музыкант и вокалистка NoMaD GURU, Исследователь и Философ. Создатель авторских активных медитаций, раскрывающих творческий потенциал человека
               - person:
-                  image: /images/school/mentors/Max@1-1-h300px.jpeg
+                  image: /images/school/mentors/Max.jpg
                   name: Макс Солдатенко
                   title: Art Director
                   desc: Музыкант, звукотерапевт, психолог, тренер. Консультирует людей и организации по методу Спиральной Динамики, использует музыку как средство коммуникации, учит взаимодействию через активное слушание.
