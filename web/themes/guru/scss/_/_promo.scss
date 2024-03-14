@@ -88,6 +88,13 @@ $arrow-animation-dy: 9px;
       @extend .text-decoration-none;
     }
   }
+  a {
+    text-decoration: none;
+    &:hover, &:active, &:focus {
+      @extend .text-danger;
+      text-decoration: underline;
+    }
+  }
 }
 @include color-mode(dark) {
   .promo {

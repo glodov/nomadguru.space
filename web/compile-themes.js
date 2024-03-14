@@ -13,14 +13,16 @@ const NODE_MODULES = [
   './node_modules/ejs/ejs.min.js',
 ];
 
-const THEMES_DIR = join(__dirname, 'themes');
+const THEMES_DIR       = join(__dirname, 'themes');
 const ICONS_SOURCE_DIR = './icons';
-const SCSS_SOURCE_DIR = './scss'; // Adjust if your SCSS directory name differs
-const CSS_OUTPUT_DIR = './public/css'; // Adjust based on your output directory structure
-const JS_SOURCE_DIR = './js'; // Assuming this is your JS directory within each theme
-const JS_OUTPUT_DIR = './public/js'; // Target directory for JS files
-const IS_WATCHING = process.argv.includes('--watch');
-const SHOULD_MINIFY = process.argv.includes('--minify');
+const SCSS_SOURCE_DIR  = './scss'; // Adjust if your SCSS directory name differs
+const CSS_OUTPUT_DIR   = './public/css'; // Adjust based on your output directory structure
+const JS_SOURCE_DIR    = './js'; // Assuming this is your JS directory within each theme
+const JS_OUTPUT_DIR    = './public/js'; // Target directory for JS files
+const FONTS_SOURCE_DIR = './fonts'; // Source fonts directory within each theme
+const FONTS_OUTPUT_DIR = './fonts'; // Target directory for fonts files
+const IS_WATCHING      = process.argv.includes('--watch');
+const SHOULD_MINIFY    = process.argv.includes('--minify');
 
 async function isFileNewer(srcPath, targetPath) {
   try {
@@ -137,6 +139,47 @@ async function copyJsToPublic(themeName, subdir = '', outputFile = 'index.min.js
     }
   });
 }
+async function copyFonts(themeName) {
+  let sourcePath;
+  let targetPath;
+  let files = [];
+  if (themeName.includes('/') || themeName.includes('\\')) {
+    targetPath = join(__dirname, FONTS_OUTPUT_DIR);
+    try {
+      const stat = await fsPromises.stat(themeName);
+      if (stat.isDirectory()) {
+        sourcePath = themeName;
+        files = await readDirectoryRecursively(sourcePath);
+      } else {
+        sourcePath = dirname(themeName);
+        files.push(relative(sourcePath, themeName));
+      }
+    } catch (error) {
+      console.error(`Error accessing path: ${themeName}`, error);
+    }
+  } else {
+    try {
+      sourcePath = join(THEMES_DIR, themeName, FONTS_SOURCE_DIR);
+      targetPath = join(__dirname, CSS_OUTPUT_DIR, themeName, FONTS_OUTPUT_DIR);
+      files = await fsPromises.readdir(sourcePath);
+    } catch (error) {
+      console.log(`Error to read dir`, error);
+    }
+  }
+
+  async function copy(sourceFile) {
+    const file = typeof sourceFile === 'string' ? sourceFile : sourceFile.join('/');
+    const srcFilePath = join(sourcePath, file);
+    const destFilePath = join(targetPath, file);
+    if (await isFileNewer(srcFilePath, destFilePath)) {
+      await fsPromises.mkdir(dirname(destFilePath), { recursive: true }).catch(console.error);
+      await copyFile(srcFilePath, destFilePath);
+      console.log(` ${NANO} [${themeName}] Copied ${file} to ${relative(__dirname, destFilePath)}.`);
+    }
+  }
+
+  files.forEach(copy);
+}
 async function unzipIcomoon(themeName, fullPath = null) {
   let themeDir = fullPath;
   let icomoonZipPath;
@@ -160,6 +203,7 @@ async function unzipIcomoon(themeName, fullPath = null) {
   const icomoonAssets = [
     { src: join(extractPath, 'selection.json'), dest: join(themeDir, ICONS_SOURCE_DIR, 'selection.json') },
     { src: join(extractPath, 'style.css'), dest: join(themeDir, SCSS_SOURCE_DIR, '_icomoon.scss') },
+    { src: join(extractPath, 'fonts'), dest: join(themeDir, 'fonts') },
     { src: join(extractPath, 'fonts'), dest: join(CSS_OUTPUT_DIR, themeName, 'fonts') }
   ];
 
@@ -203,6 +247,7 @@ async function unzipIcomoon(themeName, fullPath = null) {
       });
   
       copyJsToPublic(theme.name);
+      copyFonts(theme.name);
     });
 })();
 
