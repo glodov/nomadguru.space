@@ -1,27 +1,27 @@
 .social {
   @extend .text-center;
-  nav {
-    @extend .mt-4;
+}
+.social nav, nav.social {
+  @extend .mt-4;
+  @extend .d-flex;
+  @extend .flex-wrap;
+  @extend .justify-content-center;
+  @extend .align-items-stretch;
+  @extend .gap-3;
+  img,
+  svg {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+  a {
     @extend .d-flex;
-    @extend .flex-wrap;
-    @extend .justify-content-center;
-    @extend .align-items-stretch;
-    @extend .gap-3;
-    img,
-    svg {
-      max-width: 3rem;
-      max-height: 3rem;
-    }
-    a {
-      @extend .d-flex;
-      @extend .align-items-center;
-      @extend .gap-2;
-      @extend .btn;
-      @extend .btn-outline-danger;
+    @extend .align-items-center;
+    @extend .gap-2;
+    @extend .btn;
+    @extend .btn-outline-danger;
+    cursor: pointer;
+    label {
       cursor: pointer;
-      label {
-        cursor: pointer;
-      }
     }
   }
 }

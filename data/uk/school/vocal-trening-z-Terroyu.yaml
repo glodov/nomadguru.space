@@ -2,20 +2,46 @@ title: ПРОБУЖДЕНИЕ ГОЛОСА
 page:
   content:
     - promo:
-      - ОСВОБОЖДАЯ СВОЙ ГОЛОС - ТЫ ОСВОБОЖДАЕШЬ СВОЕ СОЗНАНИЕ
-      - h1: ПРОБУЖДЕНИЕ ГОЛОСА
-      - footer:
-        - $href: '#about'
-          a: О нас
-        - $href: '#schedule'
-          a: Расписание
-    - $id: about
-      section:
-      - h2: ХОЧЕШЬ НАУЧИТЬСЯ ПЕТЬ?
-      - h3: Тогда тебе сюда!
-      - p: |
-          Мы обучили уже более 10050000 учеников
-          так что давай вливайся бро
+        background:
+          img: /images/school/vocal-trening-z-Terroyu@16-9.webp
+        height: max
+        arrow: '#about'
+        block:
+          - ОСВОБОЖДАЯ СВОЙ ГОЛОС - ТЫ ОСВОБОЖДАЕШЬ СВОЕ СОЗНАНИЕ
+          - $class: my-5
+            h1: ПРОБУЖДЕНИЕ ГОЛОСА
+          - $class: d-flex gap-3 justify-content-center
+            footer:
+            - $href: '#about'
+              $class: btn btn-warning btn-lg
+              a: О нас
+            - $href: '#schedule'
+              $class: btn btn-outline-warning btn-lg
+              a: Расписание
+    - promo:
+        $id: about
+        $class: promo bg-body text-body
+        height: max
+        arrow: '#schedule'
+        block:
+          $class: container-fluid text-center
+          $style: max-width:100%
+          content:
+            - $class: display-3
+              h2: ХОЧЕШЬ НАУЧИТЬСЯ ПЕТЬ?
+            - $class: display-5 mb-5
+              h3: Тогда тебе сюда!
+            - $class: mb-5
+              p: |
+                Мы обучили уже более 10050000 учеников
+                так что давай вливайся бро
+            - gallery:
+                id: schedule
+                thumb: 1-1-h300px.webp
+                items:
+                - image: /images/school/gallery/111_0008.jpg
+                - image: /images/school/gallery/111_9741.jpg
+                - image: /images/school/gallery/111_9982.jpg
     - promo:
       - h2: ЭТО ПОЧТИ КАК СЕКТА
       - hr: true
@@ -122,11 +148,11 @@ page:
     #       company:
     #         name: Pixels
     #         link: https://google.com
-    - gallery:
-      title: Прошедшие мероприятия
-      desc: Фотографии с нашей тусы
-      items:
-        - jam/1.jpg.webp
-        - jam/2.jpg.webp
-        - jam/3.jpeg.webp
-        - jam/4.jpeg.webp
+    - $class: py-5 gallery slider
+      section:
+        - gallery:
+            items:
+              - jam/1.jpg.webp
+              - jam/2.jpg.webp
+              - jam/3.jpeg.webp
+              - jam/4.jpeg.webp

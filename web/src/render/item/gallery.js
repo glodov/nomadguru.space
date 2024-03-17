@@ -38,9 +38,7 @@ async function renderGallery(args, mods) {
         }
     }
 
-    // check for all ['image'] inside the data['page']
     await findImagesRecursive(data['page']);
-        
     return { key: 'gallery', out };
 }
 

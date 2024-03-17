@@ -1,0 +1,111 @@
+title: THE WAY
+page:
+  content:
+    - promo:
+        $id: theway
+        $class: promo block-100
+        background:
+          img: /images/art/boat-on-river.jpg
+        height: max
+        arrow: '#about'
+        block:
+          - $class: display-5
+            h1: NOMAD GURU - THE WAY
+          - $class: mt-5
+            h2: Сага про шлях
+
+    - promo:
+        $id: about
+        $class: promo primary
+        height: max
+        arrow: '#riverinme'
+        block:
+          $class: block primary fs-5
+          content:
+            - p: Альбом складається з кількох Саг розповідей про мандрівника, що кочує, досліджує світ і самого себе.
+            - p: NOMAD GURU - це збірний образ представника людства на шляху пізнання світу та власного Я, який проживає свій досвід у суспільстві. Гуру більше не йдуть у ліс і не сидять там у нірвані. Гуру знаходяться серед нас. Сьогодні кожен може стати гуру, коучем, майстром і насамперед майстром для самого себе. NOMAD GURU йде своїм шляхом і ділиться з вами своїми дорожніми нотатками. Мова Guru – музика. Слов'янське, Романське, шаманське коріння в його складах.
+            - p: Кожен може пройти шляхом, але тільки той, хто пройде цей шлях, до кінця дізнається істину.
+
+    - promo:
+        $id: riverinme
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/TeecIPWKJAQ?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#holody'
+        block:
+          - $class: display-3 mb-5
+            h2: RIVER IN ME
+          - p: Серце не відкривається одразу. Воно розпускається поступово, пелюстка за пелюсткою, обережно, крок за кроком відкриваючись такому небезпечному, на перший погляд, світу.
+          - social: 
+            - https://www.youtube.com/watch?v=TeecIPWKJAQ
+            - https://soundcloud.com/nomad-guru/river-in-me
+
+    - promo:
+        $id: holody
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/qstQ9SwCPGs?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#satkartar'
+        block:
+          - $class: display-3 mb-5
+            h2: HOLODY
+          - social: 
+            - https://www.youtube.com/watch?v=qstQ9SwCPGs
+            - https://soundcloud.com/nomad-guru/nmdguru-holody
+            - https://music.apple.com/us/album/holody/1500061359?i=1500061360
+
+    - promo:
+        $id: satkartar
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/hPMwUvRXnR4?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#syla'
+        block:
+          - $class: display-3 mb-5
+            h2: SAT KAR TAR
+          - p: 'Ти живеш у постійній гонці. Божевільний світ мчить назустріч на надсвітловій, невпинно бомбардуючи тебе новинами, подіями, обставинами і пильно спостерігає: що ти робитимеш, як справлятимешся? Повертатися, ховатися, приймати удар?'
+          - social: 
+            - https://www.youtube.com/watch?v=hPMwUvRXnR4
+            - https://soundcloud.com/nomad-guru/nomad-guru-sat-kar-tar-deep-organic
+            - https://music.apple.com/us/album/sat-kar-tar/1596946540?i=1596946541
+
+    - promo:
+        $id: syla
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/FoandrnMWWM?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#okean'
+        block:
+          - $class: display-3 mb-5
+            h2: SYLA
+          - social: 
+            - https://www.youtube.com/watch?v=FoandrnMWWM
+            - https://music.apple.com/us/album/%D1%81%D0%B8%D0%BB%D0%B0/1679446772?i=1679446778
+
+    - promo:
+        $id: okean
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/gaLjOFvHfFQ?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#footer'
+        block:
+          - $class: display-3 mb-5
+            h2: V KRAPLI OKEAN
+          - social: 
+            - https://www.youtube.com/watch?v=gaLjOFvHfFQ
+            - https://music.apple.com/us/album/%D0%B2-%D0%BA%D1%80%D0%B0%D0%BF%D0%BB%D1%96-%D0%BE%D0%BA%D0%B5%D0%B0%D0%BD-single/1697565022

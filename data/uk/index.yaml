@@ -20,15 +20,15 @@ page:
             - $href: art/index.html
               a: ART
             - "}"
-          - p:
+            - ' '
             - "["
             - $href: house/index.html
               a: HOUSE
             - "]"
-          - p:
+            - ' '
             - "|"
             - $href: school/index.html
-              a: SCHOOL
+              a: SCHOOl
             - "|"
           - p: слухати NOMAD GURU на твоєму улюбленому ресурсі
           - p:

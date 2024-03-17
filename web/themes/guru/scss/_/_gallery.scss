@@ -1,0 +1,18 @@
+.gallery {
+  @extend .d-flex;
+  @extend .justify-content-start;
+  @extend .justify-content-lg-center;
+  @extend .gap-3;
+  overflow: auto;
+  img {
+    max-width: 20rem;
+    border: 3px solid $black;
+  }
+}
+@include color-mode(dark) {
+  .gallery {
+    img {
+      border-color: $white;
+    }
+  }
+}

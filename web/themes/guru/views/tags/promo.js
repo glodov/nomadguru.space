@@ -1,5 +1,5 @@
 /**
- * { promo: { height: 'max', background: { img | iframe } } }
+ * { promo: { height: 'max', background: { img | iframe }, block: {} } }
  */
 module.exports = function(content) {
     const tag = {

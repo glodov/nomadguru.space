@@ -76,7 +76,7 @@ module.exports = {
     VIEWS_DIR: path.resolve(__dirname, './views/'),
     THEMES_DIR: path.resolve(__dirname, './themes/'),
     STATIC_DIR: path.resolve(__dirname, './public/'),
-    GALLERY_THUMB_DIR: path.resolve(__dirname, './public/thumb/'),
+    GALLERY_THUMB_DIR: false,
     LOGS_DIR: path.resolve(__dirname, './logs/'),
     MODULES_PUBLIC_DIR: path.resolve(__dirname, './public/modules/'),
     STATIC_ALLOWED,

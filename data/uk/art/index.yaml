@@ -1,0 +1,61 @@
+title: ART
+
+page:
+  content:
+    - promo:
+        $id: art-promo
+        background:
+          img: /images/art/boat-on-river.jpg
+        height: max
+        arrow: '#tonesofmind'
+        block:
+          - h2: '{ART}'
+          - $class: my-5
+            h3: CREATE
+          - p: ' ---> Творчість NOMAD GURU найкраще визначається як «музика станів», поєднуючи у собі глибокі електронні баси, пронизливий жіночий вокал та первісну силу етнічних інструментів з усього світу. Народжена в імпровізації, музика NOMAD GURU - це маніфест чистого буття, філософії "тут-і-зараз" --- «'
+    - promo:
+        $id: tonesofmind
+        $class: promo block-start
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/QVYgG8vvA0I?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&list=PLmx-EJFZXz3HvS5dBdesNRKQEX8OOe795&mute=1"
+        height: max
+        arrow: '#theway'
+        block:
+          - h3: 'ALBUM #TONESOFMIND'
+          - $class: my-5
+            p: '2019 / Deep Trible Shaman House'
+          - social:
+            - https://www.youtube.com/watch?v=QVYgG8vvA0I&list=PLmx-EJFZXz3HvS5dBdesNRKQEX8OOe795
+            - https://music.apple.com/ua/album/tones-of-mind/1481867435
+            - https://soundcloud.com/nomad-guru/sets/tones-of-mind-2019
+    - promo:
+        $id: theway
+        background:
+          $frameborder: 0
+          $allow: "fullscreen"
+          $style: "aspect-ratio: 16/9"
+          iframe: "https://www.youtube.com/embed/hPMwUvRXnR4?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
+        height: max
+        arrow: '#theway'
+        block:
+          - h3: '#THEWAY'
+          - $class: my-5
+            p: '2020 — теперішній час / Deep Organic Thecno — Downtempo — SHAMAN CHILL SINGLES'
+          - p:
+            - $href: /uk/art/theway/index.html
+              a: '#THEWAY'
+            - ' / 2020 — теперішній час / Deep Organic Thecno — Downtempo — SHAMAN CHILL SINGLES '
+            - $href: /uk/art/theway/index.html#holody
+              a: '#HOLODY'
+            - ' '
+            - $href: /uk/art/theway/index.html#satkartar
+              a: '#SATKARTAR'
+          - p: '#NOMADGURUECSTATIC сети для тіла і духу. Танцюй, Дихай, Відчувай, Медитуй, проявляйся в музиці разом з нами!'
+          - $class: my-3
+            h3: 'VISUAL ART -> ASHO NICO'
+          - $href: /uk/art/theway/index.html
+            $class: btn btn-danger
+            a: Перейти на сторінку альбому

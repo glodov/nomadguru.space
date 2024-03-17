@@ -1,6 +1,4 @@
 const fs = require('node:fs');
-const path = require('node:path');
-const { runtime } = require('../../../../src/runtime');
 const SOCIAL_NETWORKS = [
     { host: ['instagram.com'], icon: 'instagram', title: 'Instagram', color: '#bc2a8d' },
     { host: ['twitter.com', 'x.com'], icon: 'x', title: 'Twitter', color: '#1da1f2' },
@@ -15,6 +13,7 @@ const SOCIAL_NETWORKS = [
     { host: 'tiktok.com', icon: 'tiktok', title: 'TikTok', color: '#69c9d0' },
     { host: 'medium.com', icon: 'medium', title: 'Medium', color: '#00ab6c' },
     { host: 'soundcloud.com', icon: 'soundcloud-peace', title: 'SoundCloud', color: '#ff5500' },
+    { host: 'music.apple.com', icon: 'apple-music', title: 'Apple Music', color: '#FA233B' },
 ];
 /**
  * { social-btn: { link, image, title, class } } 
@@ -44,7 +43,6 @@ module.exports = function(content) {
         if (image) return;
         const host = url.host.startsWith('www.') ? url.host.slice(4) : url.host;
         if (Array.isArray(network.host) && network.host.includes(host) || host === network.host) {
-            // image = path.join(runtime['STATIC_DIR'], `/img/brands/${network.icon}.svg`);
             image = `/img/brands/${network.icon}.svg`;
             if (!title) title = network.title;
             if (!color) color = network.color;
@@ -54,7 +52,7 @@ module.exports = function(content) {
     let svg = '';
     if (!image.startsWith('/img/')) {
         if (!fs.existsSync(image)) {
-            throw new Error(`Social icon file not found: ${image}`);
+            throw new Error(`Social icon file not found: ${link}`);
         }
         svg = fs.readFileSync(image).toString();
     }

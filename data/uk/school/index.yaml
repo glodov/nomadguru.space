@@ -34,35 +34,22 @@ page:
                 "... Ми допомагаємо іншим освоїти свій голос, сучасні New Age та стародавні етно-інструменти, вчимо грі на гітарі, потоковій електронній аранжировці та взаємодії в музиці!
             - $class: d-flex flex-row flex-wrap
               nav:
-                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
-                  div:
-                  - $class: flex-grow-1
-                    $style: max-height:6rem
+                - feature:
                     icon: melody
-                  - Трансформація через звук, голос, танець, тіло
-                  - h3: ТВОРИ
-                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
-                  div:
-                  - $class: flex-grow-1
-                    $style: max-height:6rem
+                    text: Трансформація через звук, голос, танець, тіло
+                    title: ТВОРИ
+                - feature:
                     icon: ohm
-                  - Імпровізація в музиці та в житті
-                  - h3: ЖИВИ
-                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
-                  div:
-                  - $class: flex-grow-1
-                    $style: max-height:6rem
+                    text: Імпровізація в музиці та в житті
+                    title: ЖИВИ
+                - feature:
                     icon: head
-                  - Досвідчені наставники та нові друзі
-                  - h3: ВЧИ
-                - $class: d-flex flex-column col-6 col-lg-3 p-2 p-md-3 p-lg-4
-                  div:
-                  - $class: flex-grow-1
-                    $style: max-height:6rem
+                    text: Досвідчені наставники та нові друзі
+                    title: ВЧИ
+                - feature:
                     icon: lotus
-                  - Майстер-класи, воркшопи, джеми, ретріти, виїзди в місця сили
-                  - h3: ВЧИСЬ
-
+                    text: Майстер-класи, воркшопи, джеми, ретріти, виїзди в місця сили
+                    title: ВЧИСЬ
     - promo:
         $id: mentors
         background:
@@ -81,17 +68,17 @@ page:
             - $class: mentors
               nav:
               - person:
-                  image: /images/school/mentors/Eugene@1-1-h300px.jpeg
+                  image: /images/school/mentors/Eugene@1-1-h300px.webp
                   name: Євген Артеменко
                   title: Голосовий коуч
                   desc: Музикант-мультиінструменталіст, діджей та продюсер
               - person:
-                  image: /images/school/mentors/Nata@1-1-h300px.jpeg
+                  image: /images/school/mentors/Nata@1-1-h300px.webp
                   name: Ната Турбіна
                   title: Генеральний директор, Голосовий коуч
                   desc: Ідеологічний натхненник NOMAD GURU Ментор, Музикант і вокалістка NoMaD GURU, Дослідник і Філософ. Творець авторських активних медитацій, що розкривають творчий потенціал людини
               - person:
-                  image: /images/school/mentors/Max@1-1-h300px.jpeg
+                  image: /images/school/mentors/Max@1-1-h300px.webp
                   name: Макс Солдатенко
                   title: Art Director
                   desc: Музикант, звукотерапевт, психолог, тренер. Консультує людей та організації за методом Спіральної Динаміки, використовує музику як засіб комунікації, навчає взаємодії через активне слухання.

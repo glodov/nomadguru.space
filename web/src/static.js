@@ -268,7 +268,7 @@ function serveFile(res, filePath) {
     fs.createReadStream(filePath).pipe(res);
 }
 
-function getOriginalDimensions(filePath) {
+async function getOriginalDimensions(filePath) {
     // Return a promise that resolves with the dimensions of the image
     return new Promise((resolve, reject) => {
         sharp(filePath)
