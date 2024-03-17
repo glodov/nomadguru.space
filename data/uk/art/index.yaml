@@ -39,7 +39,7 @@ page:
           $style: "aspect-ratio: 16/9"
           iframe: "https://www.youtube.com/embed/hPMwUvRXnR4?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1"
         height: max
-        arrow: '#theway'
+        arrow: '#footer'
         block:
           - h3: '#THEWAY'
           - $class: my-5
