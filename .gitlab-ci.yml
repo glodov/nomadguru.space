@@ -1,5 +1,4 @@
 image: node:21
-# Functions that should be executed before the build script is run
 before_script:
   - npm install
 cache:
