@@ -1,0 +1,11 @@
+version: '3.8'
+name: nomad-guru-www
+services:
+  web:
+    container_name: web-server
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web/dist:/usr/share/nginx/html:ro
+    restart: always

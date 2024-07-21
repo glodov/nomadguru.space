@@ -4,11 +4,9 @@ $layout: index
 $icon: /img/logo/white.png
 $javascriptModules:
   - bootstrap.bundle.min.js
-  - nw/api.min.js
-  - nw/types.min.js
+  - nw/index.min.js
   - $theme/index.min.js
 $cssFiles:
-  - nw/index.css
   - $theme/index.css
 $favicons:
   - sizes: 64x64

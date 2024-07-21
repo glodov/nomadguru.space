@@ -7,19 +7,14 @@ cache:
     - web/nano/
     - web/dist/
     - web/logs/
-
 pages:
   stage: deploy
   script:
-    - pwd
+    - npm run init
     - npm run dist
   artifacts:
     paths:
-    - web/dist
+      - web/dist
   only:
-    - main  # Change this to the branch you want to trigger the pipeline
+    - main
   publish: web/dist
-  # rules:
-  #   # This ensures that only pushes to the default branch will trigger
-  #   # a pages deploy
-  #   - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

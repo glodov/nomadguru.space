@@ -2,11 +2,12 @@
   "description": "Static site generator on Javascript.",
   "main": "server.js",
   "scripts": {
+    "init": "npx nanoweb init",
     "start": "npx nanoweb server",
     "build": "npx nanoweb render",
-    "dist:why": "echo \"async function to install dependencies does not work properly in nanoweb render\"",
     "dist": "npx nanoweb render && npx nanoweb publish --skip-render",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dist:why": "echo \"async function to install dependencies does not work properly in nanoweb render\""
   },
   "keywords": [
     "ssg",
@@ -18,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nanoweb": "^0.2.3"
+    "nanoweb": "^0.2.4"
   },
   "name": "nomadguru.space",
   "version": "1.0.0",
