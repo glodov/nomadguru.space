@@ -4,7 +4,8 @@
   "scripts": {
     "start": "npx nanoweb server",
     "build": "npx nanoweb render",
-    "dist": "npx nanoweb publish",
+    "dist:why": "echo \"async function to install dependencies does not work properly in nanoweb render\"",
+    "dist": "npx nanoweb render && npx nanoweb publish --skip-render",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [
