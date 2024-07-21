@@ -1,4 +1,4 @@
-const { nano2html } = require('../../../../src/ejs/functions');
+const { nano2html } = require('nanoweb/ejs');
 /**
  * { social: [ link ] } 
  * { social: link } 

@@ -1,0 +1,68 @@
+all:
+  ROOT_DIR: ./web
+  DATA_DIR: ./data
+  HOST: nomadguru.space
+  SERVER_PORT: 3888
+  STATIC_ALLOWED:
+    - /favicon.ico
+    - /search/
+    - /css/
+    - /js/
+    - /img/
+    - /images/
+    - /nwe/
+    - /thumb/
+    - /translation.
+    - /sitemap.
+    - /sitemaps
+    - /robots.txt
+  render/robots.txt:
+    rows:
+      - 'User-agent: *'
+      - 'Allow: /'
+  render/search:
+    blockRowsLimit: 0
+    blockSizeLimit: 0
+    gallery:
+    divider: "\n\n"
+    imageKeys: ['ogImage', 'image', 'thumb']
+    categories: []
+  gallery:
+    thumb: '4-3-h300px-q90'
+    alwaysWEBP: true
+  themes:
+    - guru
+    # - name: nano
+    #   merge: true
+    #   # dir: ./node_modules/nanoweb-theme-nano
+private:
+  render/modules:
+    item:
+      - gallery
+      - redirects
+      - dev
+      - references
+      - translations
+      - html
+    html: []
+    final: []
+public:
+  render/modules:
+    item:
+      - search
+      - gallery
+      - htaccess
+      - robotsTXT
+      - sitemapXML
+      - translations
+      - references
+      - html
+    html:
+      - scripts
+      - styles
+      - emails
+      - links
+      - minify
+      - save
+    final: []
+  publish/method: dist

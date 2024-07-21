@@ -1,4 +1,4 @@
-const { utils } = require('../../../../src/ejs/utils');
+const { utils } = require('nanoweb/ejs');
 /**
  * { contact: { phone, email, address } }
  */

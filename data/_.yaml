@@ -1,6 +1,7 @@
 $host: https://nomadguru.yaro.page
 $theme: guru
 $layout: index
+$icon: /img/logo/white.png
 $javascriptModules:
   - bootstrap.bundle.min.js
   - nw/api.min.js

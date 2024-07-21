@@ -1,0 +1,20 @@
+{
+  "name": "guru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Nothing to build\" && exit 0",
+    "watch": "echo \"Nothing to watch for\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "hamburgers": "^1.2.1",
+    "nanoweb": "~/Projects/npm/nanoweb",
+    "nanoweb-fs": "^1.2.3"
+  }
+}

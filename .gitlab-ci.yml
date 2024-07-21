@@ -5,16 +5,15 @@ before_script:
 cache:
   paths:
     - web/node_modules/
-    - web/.nw/
+    - web/nano/
     - web/dist/
+    - web/logs/
 
 pages:
   stage: deploy
   script:
     - pwd
-    - npm run compile-themes
-    - npm run render-ssg
-    - npm run copy-dist
+    - npm run dist
   artifacts:
     paths:
     - web/dist
