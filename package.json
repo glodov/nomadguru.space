@@ -23,6 +23,6 @@
   "author": "Yaro",
   "homepage": "https://nanoweb.yaro.page",
   "dependencies": {
-    "nanoweb": "^0.5.1"
+    "nanoweb": "^0.5.2"
   }
 }
