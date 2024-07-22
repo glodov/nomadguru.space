@@ -65,4 +65,4 @@ public:
       - minify
       - save
     final: []
-  publish/method: dist/gitlab
+  publish/method: dist/github

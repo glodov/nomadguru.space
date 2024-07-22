@@ -6,8 +6,8 @@
     "start": "npx nanoweb server",
     "build": "npx nanoweb render",
     "dist": "npx nanoweb render && npx nanoweb publish --skip-render",
-    "deploy": "gh-pages -d dist",
-    "dist:why": "echo \"async function to install dependencies does not work properly in nanoweb render\""
+    "dist:why": "echo \"async function to install dependencies does not work properly in nanoweb render\"",
+    "deploy": "gh-pages -d web/dist"
   },
   "keywords": [
     "ssg",
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nanoweb": "^0.3.1"
+    "nanoweb": "^0.4.1"
   },
   "name": "nomadguru.space",
   "version": "1.0.0",
