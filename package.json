@@ -18,11 +18,11 @@
     "generator"
   ],
   "license": "MIT",
-  "dependencies": {
-    "nanoweb": "^0.4.1"
-  },
   "name": "nomadguru.space",
   "version": "1.0.0",
   "author": "Yaro",
-  "homepage": "https://nanoweb.yaro.page"
+  "homepage": "https://nanoweb.yaro.page",
+  "dependencies": {
+    "nanoweb": "^0.5.1"
+  }
 }
