@@ -1,0 +1,170 @@
+<html lang="uk"  data-gtag-id="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta charset="UTF-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        
+            <link href="/css/guru/index.css?" rel="stylesheet">
+        
+        
+        <!-- Favicon for various platforms -->
+
+    <link rel="icon" href="/img/favicon/favicon-64.ico" sizes="64x64" type="image/icon">
+
+    <link rel="icon" href="/img/logo/black@2d.png" sizes="300x300" type="image/png">
+
+    <link rel="apple-touch-icon" href="/img/logo/black@2d.png" sizes="180x180" type="image/icon">
+
+
+        
+    <meta property="og:title" content="NOMAD GURU∙ NOMAD GURU">
+
+
+
+    <meta property="og:image" content="https://nomadguru.yaro.page/img/logo/black@2d.png">
+
+
+<meta property="og:url" content="https://nomadguru.yaro.page/index">
+<meta name="twitter:card" content="summary_large_image">
+
+
+        
+        <base href="/uk/">
+        
+        <title>NOMAD GURU∙ NOMAD GURU</title>
+        
+        
+
+        
+    </head>
+    <body class="index " >
+        
+        
+
+
+
+<section class="d-flex flex-column justify-content-center align-items-center gap-5" style="height: 100vh">
+    <img data-bs-theme="light" alt="NOMAD GURU" src="/img/logo/black@2d.png"><img data-bs-theme="dark" alt="NOMAD GURU" style="display: none" src="/img/logo/white@2d.png">
+    
+
+    <nav nw="langs" nwopts="switch:1080" class="container">
+        <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-4 gap-lg-5">
+            
+                <li>
+                    <a class="btn btn-outline-secondary fs-3" href="/uk/index.html" nw-lang="uk"><img src="/img/lang/uk.svg" alt="Українська" style="max-height: 3rem"><span><span>Українська</span></span></a>
+                </li>
+            
+                <li>
+                    <a class="btn btn-outline-secondary fs-3" href="/en/index.html" nw-lang="en"><img src="/img/lang/en.svg" alt="English" style="max-height: 3rem"><span><span>English</span></span></a>
+                </li>
+            
+                <li>
+                    <a class="btn btn-outline-secondary fs-3" href="/ru/index.html" nw-lang="ru"><img src="/img/lang/ru.svg" alt="Русский" style="max-height: 3rem"><span><span>Русский</span></span></a>
+                </li>
+            
+        </ul>
+    </nav>
+</section>
+
+
+<!-- Modal Structure -->
+        <!-- Modal Structure -->
+        
+        <div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="btn-close" data-bs-dismiss="modal">
+                </button>
+            </div>
+            <div class="modal-body d-flex flex-column justify-content-center">
+                <!-- Carousel -->
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Items will be inserted here dynamically -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title fs-5" id="searchModalLabel">
+                    Search on the website
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body search-body">
+                <!-- Search Input Field -->
+                <form class="input-group" id="searchForm">
+                    <input class="form-control form-control-lg" type="search" name="q"
+                        placeholder="Vocal school" aria-label="Search" form="searchForm" id="searchInput">
+                    <button class="btn btn-primary btn-lg" type="submit" form="searchForm" id="searchSubmit">
+                        <span class="icon-search fs-2"></span>
+                        <span>Go</span>
+                    </button>
+                </form>
+                <div id="searchResults" class="search-results">
+                </div>
+                <template id="searchSummaryTemplate">
+                    <header class="summary">
+                        <div class="on-found">
+                            <span class="badge bg-success" nw="found"></span>
+                            results found
+                        </div>
+                        <div class="off-found">No results found</div>
+                    </header>
+                </template>
+                <template id="searchResultTemplate">
+                    <article>
+                        <figure>
+                            <a href="#" nw="url"><img src="" alt="" nw="img"></a>
+                        </figure>
+                        <footer>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" nw="path"></ol>
+                            </nav>
+                            <a href="#" nw="url">
+                                <span nw="title"></span>
+                            </a>
+                            <p nw="desc"></p>
+                            <a href="#" class="btn btn-sm btn-outline-info d-none" nw="url">
+                                searchReadMore
+                            </a>
+                        </footer>
+                    </article>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+            <script src="/js/bootstrap.bundle.min.js?" type="text/javascript"></script>
+        
+            <script src="/js/nw/index.min.js?" type="text/javascript"></script>
+        
+            <script src="/js/guru/index.min.js?" type="text/javascript"></script>
+        
+        
+        
+        
+    </body>
+</html>
