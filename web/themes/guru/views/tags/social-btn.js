@@ -23,9 +23,6 @@ const SOCIAL_NETWORKS = [
     { host: 'amazon.com', icon: 'amazon', title: 'Amazon', color: '#FF9900' }, 
 ];
 const imgMap = {};
-const imgDirs = [
-    runtime['STATIC_DIR'],
-];
 
 function isDomainIn(domain, host = []) {
     if (Array.isArray(host)) return host.some(h => isDomainIn(domain, h));
@@ -43,6 +40,9 @@ function isDomainIn(domain, host = []) {
 </a>
  */
 module.exports = function(content) {
+    const imgDirs = [
+        runtime.get('STATIC_DIR'),
+    ];
     const item = content['social-btn'];
     let link = '';
     let title = '';
@@ -70,6 +70,9 @@ module.exports = function(content) {
     let svg = '';
     if ('undefined' === typeof imgMap[image]) {
         for (const dir of imgDirs) {
+            if (!dir || !image) {
+                const x = 9;
+            }
             const file = join(dir, image.startsWith('/') ? image.slice(1) : image);
             if (existsSync(file)) {
                 svg = loadFile(file);

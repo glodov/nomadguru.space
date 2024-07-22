@@ -2,7 +2,8 @@ node_modules/
 # no need to store every change of the css, scss is the source
 /static/css/index.css
 /static/css/index.css.map
-/static/css/*/
+/static/css/guru/index.css
+/static/css/guru/index.css.map
 # public javascript
 /static/js/
 # no need to store rendered search, .yaml files are source

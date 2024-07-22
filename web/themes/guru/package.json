@@ -14,7 +14,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "hamburgers": "^1.2.1",
-    "nanoweb": "~/Projects/npm/nanoweb",
+    "nanoweb": "^0.3.1",
     "nanoweb-fs": "^1.2.3"
   }
 }

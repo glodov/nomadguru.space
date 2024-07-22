@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nanoweb": "^0.2.4"
+    "nanoweb": "^0.3.1"
   },
   "name": "nomadguru.space",
   "version": "1.0.0",
